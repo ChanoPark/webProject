@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <title>웹 프로젝트!!</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="{% static 'css/main_style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.dropdown-trigger');
+                var instances = M.Dropdown.init(elems, 'alignment');
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.sidenav');
+                var instances = M.Sidenav.init(elems, 'alignment');
+            });
+        </script>
+
+        <style>
+            #scholarmenu1 {
+                background-color: darkblue;
+            }
+        </style>
+    </head>
+    <body>
+        <!--상단배너-->
+        <nav class=" blue darken-4" role="navigation">
+            <div class="nav-wrapper container"><a id="logo-container" href="/main/" class="brand-logo">한마음고대</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="dropdown-trigger" href="#" data-target='dropdown2'><i class="Large material-icons">dehaze</i></a></li>
+                </ul>
+            </div>
+        </nav>
+        <ul id="dropdown2" class="dropdown-content">
+            <li><a href="/main/">메인화면</a></li>
+            <li class="divider"></li>
+            <li><a href="/scholarship/">장학금</a></li>
+            <li class="divider"></li>
+            <li><a href="/schedule/">학사일정</a></li>
+            <li class="divider"></li>
+            <li><a href="/activity/">대외활동</a></li>
+            <li class="divider"></li>
+            <li><a href="/job/">취업정보</a></li>
+            <li class="divider"></li>
+            <li><a href="/blog/">게시판</a></li>
+            <li class="divider"></li>
+        </ul>
+        <div class="container">
+            <!--장학금 메뉴 구분하는 네비게이션-->
+            <div id="scholarMenuTop">
+                <ul>
+                    <li><a class="scholarMenu" id="scholarmenu1" href="/scholarship/">장학금 구분</a></li>
+                    <li><a class="scholarMenu" id="scholarmenu2" href="/scholarship/scholarship1/">교내 장학금</a></li>
+                    <li><a class="scholarMenu" id="scholarmenu3" href="/scholarship/scholarship2/">교외 장학금</a></li>
+                    <li><a class="scholarMenu" id="scholarmenu4" href="https://www.kosaf.go.kr/ko/main.do">학자금 대출</a></li>
+                </ul>
+                <p style="color:gray; font-size:12px;">&nbsp;*학자금 대출은 한국장학재단 홈페이지로 이동합니다.</p>
+            </div>
+            <hr>
+            <h5>장학금 지원목적에 따른 구분</h5>
+            <p class="light">1) 학비감면 장학금(=수업료 장학금) : 등록금(수업료) 부담완화 목적의 장학금</p>
+            <p class="light"> 2) 학비감면 외 장학금(=학업보조비 장학금) : 등록금(수업료) 이외 생활비,기숙사비, 포상성격, 학생회활동, 멘토링, 근로장학금 등의 대가성 장학금으로 등록금(수업료) 감면과는 무관한 장학금</p>
+            <hr>
+            <h5>장학금 지원대상</h5>
+            <p class="light">1) 해당학기 재학생이어야만 장학금 지급대상임</p>
+            <p class="light">2) 다만, 근로장학금 및 해외인턴십 참여 등 장학금 지급성격상 휴학이 불가피한 경우는 예외로 함</p>
+            <p class="light">3) 장학금을 받고자 하는 자는 반드시 정해진 기간 내에 해당 장학금을 신청하고 관련서류를 제출해야 함</p>
+            <hr>
+            <h5>장학금 이중수혜</h5>
+            <p class="light" style="color:blue;">1) 학비감면 장학금의 경우는 수업료 범위 내 이중수혜 허용함<장학금지급규정 2016.3.1.개정></p>
+            <p class="light">&nbsp;&nbsp;&nbsp;예) 소득분위 7분위 인문사회계열 재학생(수업료356만원)이 장학금 신청시 이미 국가장학금 60만원, 면학장학금 118만원, 고대가족장학금 178만원 (총356만원)의 장학금을 수혜받은 경우는 장학금 지급제외되며, 본인 수업료 범위내 이중수혜는 허용됨</p>
+            <p class="light" style="color:blue;">2) 학비감면 외 장학금(학업보조비 장학금)의 경우는 수업료 범위와 관계없이 이중수혜를 허용함</p>
+            <p class="light">&nbsp;&nbsp;&nbsp;예) 위와 같이 본인 수업료 범위내 장학금을 수혜받은 학생이더라도 교외장학재단A 매월 지급되는 생활비장학금을 지원, 선발된 경우 기수혜받은 학비감면장학금과는 관계없이 수혜가능함.</p>
+            <p class="light">&nbsp;&nbsp;&nbsp;예) 타생활비장학금과 이중수혜를 허용하지 않는 학업보조비장학금도 있음(KUPC생활비장학금 등)</p>
+            <p class="light" style="color:blue;">3) 교외장학금의 경우는 장학금을 지급하는 단체가 정하는 바에 따름</p>
+            <p class="light" style="color:blue;">4) 이중수혜대상인 경우는 학생에게 유리한 장학금을 우선 지급하되, 국고장학금(국가장학금 등), 교외장학금, 교내장학금(기금장학금), 교내장학금(등록금재원)순으로 지급함</p>
+            <hr>
+            <a href="https://sejong.korea.ac.kr/academics/administraion/scholarship/freshmen" style="display:inline-block"><p class="light">출처:고려대학교 세종캠퍼스 홈페이지 - 장학</p></a>
+            <!-- 장학금 선택 메뉴 -->
+            <ul id="dropdown1" class="dropdown-content">
+                <li><a href="#!">one</a></li>
+                <li><a href="#!">two</a></li>
+                <li class="divider"></li>
+                <li><a href="#!">three</a></li>
+            </ul>
+        </div>
+        <!--footer-->
+        <footer class="page-footer blue darken-4">
+            <div class="container">
+                <div class="row">
+                <div class="col l3 s12">
+                    <h5 class="white-text">바로가기</h5>
+                    <ul>
+                        <li id="myHover"><a class="white-text"  href="https://sejong.korea.ac.kr/kr">고려대 세종캠퍼스 홈페이지</a></li>
+                        <li id="myHover" style="padding-top:2px;"><a class="white-text"  href="https://sejong.korea.ac.kr/mbshome/mbs/cdc/index.do">대학 일자리 센터</a></li>
+                        <li id="myHover" style="padding-top:2px;"><a class="white-text"  href="https://portal.korea.ac.kr/front/Intro.kpd">고려대학교 포털</a></li>
+                        <li id="myHover" style="padding-top:2px;"><a class="white-text"  href="https://sportal.korea.ac.kr/">인재양성센터</a></li>
+                    </ul>
+                </div>
+
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                Made by 2017270920_박찬호 2017270973_김대희
+                </div>
+            </div>
+        </footer>
+        <script src="{% static 'js/materialize.js' %}"></script>
+    </body>
+</html>

@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+/*
+body {
+  background-color: #fff;
+  text-align: center;
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+*/
+
+#right {
+  float:right;
+}
+
+:root {
+  --base-delay: 0.5;
+  --reveal-speed: 0.5;
+  --stagger: 0.1;
+}
+
+.block-reveal {
+  justify-content: left;
+  text-align: left;
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+}
+.block-reveal span {
+  -webkit-animation: show-text calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) steps(1) both;
+          animation: show-text calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) steps(1) both;
+  font-size: 4rem;
+  font-weight: bold;
+  overflow: hidden;
+  position: relative;
+}
+/*
+.block-reveal h5 {
+  position: relative;
+  overflow: hidden;
+  text-align:right;
+  display:block;
+}
+*/
+
+#myHover:hover{
+  color:blue;
+}
+
+#align{
+  float:center;
+  text-align: center;
+}
+#align2{
+  display:inline;
+  text-align: right;
+  background-color: #000;
+}
+.block-reveal span:after {
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--color, #1e90ff);
+  position: absolute;
+  -webkit-animation: block-reveal calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) both;
+          animation: block-reveal calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) both;
+}
+@-webkit-keyframes block-reveal {
+  0% {
+    -webkit-transform: translate(-110%, 0);
+            transform: translate(-110%, 0);
+  }
+  45%, 55% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(110%, 0);
+            transform: translate(110%, 0);
+  }
+}
+@keyframes block-reveal {
+  0% {
+    -webkit-transform: translate(-110%, 0);
+            transform: translate(-110%, 0);
+  }
+  45%, 55% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(110%, 0);
+            transform: translate(110%, 0);
+  }
+}
+@-webkit-keyframes show-text {
+  0% {
+    color: transparent;
+  }
+  50%, 100% {
+    color: #000;
+  }
+}
+@keyframes show-text {
+  0% {
+    color: transparent;
+  }
+  50%, 100% {
+    color: #000;
+  }
+}
+
+#scholarMenuTop {
+  height: 50px;
+  width: 1000px;
+}
+
+#scholarMenuTop ul li {
+  list-style: none;
+  color:blue;
+  background-color:deepskyblue;
+  float:left;
+  line-height: 30px;
+  vertical-align: middle;
+  text-align: center;
+  border-style:groove;
+  border-color:navy;
+  border-width: 1px 1px 1px 1px;
+}
+
+#scholarMenuTop .scholarMenu {
+  text-decoration: none;
+  color:white;
+  display: block;
+  width: 150px;
+  font-size: 15px;
+  font-weight: bold;
+  
+}
+
+#scholarMenuTop .scholarMenu:hover {
+  background-color:darkblue;
+}
+
+#scholarInner {
+  width:50px;
+  height:50px;
+}
+
+#scheduleTitle {
+  border:1px solid #000;
+  background-color: rgb(201, 209, 218);
+}
+
+#scheduleDes {
+  border:1px solid #000;
+}

@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>웹 프로젝트!!</title>
+
+  <!-- 머티리얼 CSS 가져오기 -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static 'css/main_style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <!--버튼 스크립트-->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.dropdown-trigger');
+        var instances = M.Dropdown.init(elems, 'alignment');
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, 'alignment');
+    });
+</script>
+
+</head>
+<body>
+    <!--상단 배너-->
+    <nav class= "blue darken-4" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="/main/" class="brand-logo">한마음고대</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a class="dropdown-trigger" href="#" data-target='dropdown2'><i class="Large material-icons">dehaze</i></a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--상단 네비게이션 내용-->
+    <ul id="dropdown2" class="dropdown-content">
+        <li><a href="/main/">메인화면</a></li>
+        <li class="divider"></li>
+        <li><a href="/scholarship/">장학금</a></li>
+        <li class="divider"></li>
+        <li><a href="/schedule/">학사일정</a></li>
+        <li class="divider"></li>
+        <li><a href="/activity/">대외활동</a></li>
+        <li class="divider"></li>
+        <li><a href="/job/">취업정보</a></li>
+        <li class="divider"></li>
+        <li><a href="/blog/">게시판</a></li>
+        <li class="divider"></li>
+    </ul>
+      <!--가운데 문구-->
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <div class="block-reveal" style="--reveal-speed: 0.75;">
+                <span style="--delay: 1.0; --color: #db0a5b;">당신의</span> 
+                <span style="--delay: 1.1; --color: #fef160;">대학생활을</span>
+                <span style="--delay: 1.2; --color: #23cba7;">편리하게!</span>
+            </div>
+            
+            <div style="float:right; text-align:right;">
+                <h5>고려대학교 세종캠퍼스의</h5>
+                <h5><b style="color:#db0a5b;">장학금</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h5>
+                <h5><b style="color:#6d81f5;">학사일정</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h5>
+                <h5><b style="color:#23cba7;">취업</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h5>
+                <h5>등등&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h5>
+                <h5>모든 실시간 정보를 한번에!</h5>
+            </div>
+            <span style="width:100px;float:right;">&nbsp;</span>
+            <div style="float:right; position:relative;">
+                <img src="{% static 'image/logo.png' %}" alt="학교로고" width="230" height="200"/>
+            </div>
+            <hr>
+       </div>
+    </div>
+        <!--중간 내용-->
+
+        <div class="container">
+            <div class="section"> 
+                <div class="row">
+                    <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center light-blue-text"><i class="large material-icons"><a href="/scholarship">attach_money</a></i></h2>
+                        <h5 class="center">장학금</h5>
+                    </div>
+                    </div>
+            
+                    <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center light-blue-text"><i class="large material-icons"><a href="/activity">rowing</a></i></h2>
+                        <h5 class="center">대외활동</h5>
+                    </div>
+                    </div>
+            
+                    <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center light-blue-text"><i class="large material-icons"><a href="/job">thumb_up</a></i></h2>
+                        <h5 class="center">취업정보</h5>
+                    </div>
+                    </div>
+                    
+                    <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center light-blue-text"><i class="large material-icons"><a href="/blog">chat</a></i></h2>
+                        <h5 class="center">게시판</h5>
+                    </div>
+                    </div>
+
+                    <div class="col s12 m4">
+                        <div class="icon-block">
+                            <h2 class="center light-blue-text"><i class="large material-icons"><a href="/schedule">event_note</a></i></h2>
+                            <h5 class="center">학사일정</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section"> 
+
+            </div>
+        </div>
+
+        <!--footer-->
+        <footer class="page-footer blue darken-4">
+            <div class="container">
+                <div class="row">
+                <div class="col l3 s12">
+                    <h5 class="white-text">바로가기</h5>
+                    <ul>
+                        <li id="myHover"><a class="white-text"  href="https://sejong.korea.ac.kr/kr">고려대 세종캠퍼스 홈페이지</a></li>
+                        <li id="myHover" style="padding-top:2px;"><a class="white-text"  href="https://sejong.korea.ac.kr/mbshome/mbs/cdc/index.do">대학 일자리 센터</a></li>
+                        <li id="myHover" style="padding-top:2px;"><a class="white-text"  href="https://portal.korea.ac.kr/front/Intro.kpd">고려대학교 포털</a></li>
+                        <li id="myHover" style="padding-top:2px;"><a class="white-text"  href="https://sportal.korea.ac.kr/">인재양성센터</a></li>
+                    </ul>
+                </div>
+
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                Made by 2017270920_박찬호 2017270973_김대희
+                </div>
+            </div>
+        </footer>
+        <script src="{% static 'js/materialize.js' %}"></script>
+    </body>
+</html>

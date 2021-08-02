@@ -1,0 +1,332 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <title>웹 프로젝트!!</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="{% static 'css/main_style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.dropdown-trigger');
+                var instances = M.Dropdown.init(elems, 'closeOnClick');
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.sidenav');
+                var instances = M.Sidenav.init(elems, 'alignment');
+            });
+        </script>
+
+        <style>
+            #scholarmenu2 {
+                background-color: darkblue;
+            }
+            td {
+                border:1px solid black"
+            }
+        </style>
+    </head>
+    <body>
+        <!--상단배너-->
+        <nav class=" blue darken-4" role="navigation">
+            <div class="nav-wrapper container"><a id="logo-container" href="/main/" class="brand-logo">한마음고대</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="dropdown-trigger" href="#" data-target='dropdown2'><i class="Large material-icons">dehaze</i></a></li>
+                </ul>
+            </div>
+        </nav>
+        <ul id="dropdown2" class="dropdown-content">
+            <li><a href="/main/">메인화면</a></li>
+            <li class="divider"></li>
+            <li><a href="/scholarship/">장학금</a></li>
+            <li class="divider"></li>
+            <li><a href="/schedule/">학사일정</a></li>
+            <li class="divider"></li>
+            <li><a href="/activity/">대외활동</a></li>
+            <li class="divider"></li>
+            <li><a href="/job/">취업정보</a></li>
+            <li class="divider"></li>
+            <li><a href="/blog/">게시판</a></li>
+            <li class="divider"></li>
+        </ul>
+
+        <div class="container">
+            <!--장학금 메뉴 구분하는 네비게이션-->
+            <div id="scholarMenuTop">
+                <ul>
+                    <li><a class="scholarMenu" id="scholarmenu1" href="/scholarship/">장학금 구분</a></li>
+                    <li><a class="scholarMenu" id="scholarmenu2" href="/scholarship/scholarship1/">교내 장학금</a></li>
+                    <li><a class="scholarMenu" id="scholarmenu3" href="/scholarship/scholarship2/">교외 장학금</a></li>
+                    <li><a class="scholarMenu" id="scholarmenu4" href="https://www.kosaf.go.kr/ko/main.do">학자금 대출</a></li>
+                </ul>
+                <p style="color:gray; font-size:12px;">&nbsp;*학자금 대출은 한국장학재단 홈페이지로 이동합니다.</p>
+            </div>
+            
+            <hr>
+            <!--교내장학금 종류 선택란-->
+            <a class="dropdown-trigger" href="#" data-target="money1" style="color:whitesmoke;">
+            <div style="border: 1px solid #000000; width:200px; height:200px; float:left; background-color:mediumturquoise;">
+                <ul>
+                    <li style="text-align: center;">면학장학금</li><hr style="color:#000000;">
+                    <li style="text-align: center;">●장학금●<br>A(수업료 전액), B(수업료의 50%), C(수업료의 35%)</li>
+                    <li style="text-align: center;">●지급기간●<br>매학기 선정</li>
+                </ul>
+            </div>
+            </a>
+
+            <a class="dropdown-trigger" href="#" data-target="money2" style="color:whitesmoke;">
+                <div style="border: 1px solid #000000; width:200px; height:200px;float:left; margin-left:10px; background-color:mediumturquoise;">
+                    <ul style="align-items: center;">
+                        <li style="text-align: center;">KU드림장학금</li><hr style="color:#000000;">
+                        <li style="text-align: center;">●장학금●<br>수업료의 50%</li>
+                        <li style="text-align: center;">●지급기간●<br>매학기</li>
+                    </ul>
+                </div>
+            </a>
+            
+            <a class="dropdown-trigger" href="#" data-target="money3" style="color:whitesmoke;">
+                <div style="border: 1px solid #000000; width:200px; height:200px;float:left; margin-left:10px; background-color:mediumturquoise;">
+                    <ul style="align-items: center;">
+                        <li style="text-align: center;">고대가족장학금</li><hr style="color:#000000;">
+                        <li style="text-align: center;">●장학금●<br>수업료의 50%</li>
+                        <li style="text-align: center;">●지급기간●<br>매학기 선정</li>
+                    </ul>
+                </div>
+            </a>
+
+            <a class="dropdown-trigger" href="#" data-target="money4" style="color:whitesmoke;">
+                <div style="border: 1px solid #000000; width:200px; height:200px;float:left; margin-left:10px; background-color:mediumturquoise;">
+                    <ul style="align-items: center;">
+                        <li style="text-align: center;">교학처특별장학금(학생처)</li><hr style="color:#000000;">
+                        <li style="text-align: center;">●장학금●<br>소정금액</li>
+                        <li style="text-align: center;">●지급기간●<br>매학기</li>
+                    </ul>
+                </div>
+            </a>
+
+            <a class="dropdown-trigger" href="#" data-target="money5" style="color:whitesmoke;">
+                <div style="border: 1px solid #000000; width:200px; height:200px; float:left; margin-left:10px; background-color:mediumturquoise;">
+                    <ul style="align-items: center;">
+                        <li style="text-align: center;">재해장학금</li><hr style="color:#000000;">
+                        <li style="text-align: center;">●장학금●<br>소정금액</li>
+                        <li style="text-align: center;">●지급기간●<br>재해발생시</li>
+                    </ul>
+                </div>
+            </a>
+            
+            <a class="dropdown-trigger" href="#" data-target="money6" style="color:whitesmoke;">
+                <div style="border: 1px solid #000000; width:200px; height:200px;float:left; margin-top:10px; background-color:mediumturquoise;">
+                    <ul style="align-items: center;">
+                        <li style="text-align: center;">봉사장학금(세종)</li><hr style="color:#000000;">
+                        <li style="text-align: center;">●장학금●<br>A(수업료 전액), B(수업료의 50%), C(수업료의 35%)</li>
+                        <li style="text-align: center;">●지급기간●<br>매학기 선정</li>
+                    </ul>
+                </div>
+            </a>
+
+            <a class="dropdown-trigger" href="#" data-target="money7" style="color:whitesmoke;">
+                <div style="border: 1px solid #000000; width:200px; height:200px;float:left; margin-top:10px; margin-left:10px; background-color:mediumturquoise;">
+                    <ul style="align-items: center;">
+                        <li style="text-align: center;">우수학생선수장학금</li><hr style="color:#000000;">
+                        <li style="text-align: center;">●장학금●<br>수업료의 70%(입학금 포함)</li>
+                        <li style="text-align: center;">●지급기간●<br>매학기</li>
+                    </ul>
+                </div>
+            </a>
+
+            <a class="dropdown-trigger" href="#" data-target="money8" style="color:whitesmoke;">
+                <div style="border: 1px solid #000000; width:200px; height:200px;float:left; margin-top:10px; margin-left:10px; background-color:mediumturquoise;">
+                    <ul style="align-items: center;">
+                        <li style="text-align: center;">근로장학금</li><hr style="color:#000000;">
+                        <li style="text-align: center;">●장학금●<br>시간당 8400원(2018년 3월 적용)</li>
+                        <li style="text-align: center;">●지급기간●<br>수시</li>
+                    </ul>
+                </div>
+            </a>
+
+            <a class="dropdown-trigger" href="#" data-target="money9" style="color:whitesmoke;">
+                <div style="border: 1px solid #000000; width:200px; height:200px;float:left; margin-top:10px; margin-left:10px; background-color:mediumturquoise;">
+                    <ul style="align-items: center;">
+                        <li style="text-align: center;">프로그램 장학금</li><hr style="color:#000000;">
+                        <li style="text-align: center;">●장학금●<br>프로그램별로 상이함.</li>
+                        <li style="text-align: center;">●지급기간●<br>프로그램별로 상이함.</li>
+                    </ul>
+                </div>
+            </a>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <hr>
+            <h5>선발 기준별 교내장학금(재학생) 신청 및 선발 안내</h5>
+            <p class="light" style="color:blue;"><b>공개선발</b></p>
+            <table>
+                <tr style="background-color:rgb(201, 209, 218)">
+                    <td style="border-right:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center">장학금명칭</td>
+                    <td style="border-right:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center">신청시기</td>
+                    <td style="border-right:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center">신청방법</td>
+                    <td style="border-bottom:1px solid black; border-top:1px solid black; text-align:center;">선발부서</td>
+                </tr>
+                <tr>
+                    <td style="border-right:1px solid black; border-bottom:1px solid black; text-align:center">면학장학금</td>
+                    <td style="border-right:1px solid black; border-bottom:1px solid black; text-align:center">6월,12월</td>
+                    <td style="border-right:1px solid black; border-bottom:1px solid black; text-align:center">국가장학금 신청 및 포탈시스템 서류 업로드</td>
+                    <td style="border-bottom:1px solid black; text-align:center;">학과, 대학 학생 복지팀</td>
+                </tr>
+                <tr>
+                    <td style="border-right:1px solid black; border-bottom:1px solid black; text-align:center">봉사장학금(세종)</td>
+                    <td style="border-right:1px solid black; border-bottom:1px solid black; text-align:center">매학기 초</td>
+                    <td style="border-right:1px solid black; border-bottom:1px solid black; text-align:center">학생복지팀 신청</td>
+                    <td style="border-bottom:1px solid black; text-align:center;">학생복지팀</td>
+                </tr>
+                <tr>
+                    <td style="border-right:1px solid black; border-bottom:1px solid black; text-align:center">고대가족장학금</td>
+                    <td style="border-right:1px solid black; border-bottom:1px solid black; text-align:center">4월, 10월</td>
+                    <td style="border-right:1px solid black; border-bottom:1px solid black; text-align:center">학생복지팀 신청</td>
+                    <td style="border-bottom:1px solid black; text-align:center;">학생복지팀</td>
+                </tr>
+                <tr>
+                    <td style="border-right:1px solid black; border-bottom:1px solid black; text-align:center">재해장학금</td>
+                    <td style="border-right:1px solid black; border-bottom:1px solid black; text-align:center">사유발생 시</td>
+                    <td style="border-right:1px solid black; border-bottom:1px solid black; text-align:center">학생복지팀 신청</td>
+                    <td style="border-bottom:1px solid black; text-align:center;">학생복지팀</td>
+                </tr>
+                <tr>
+                    <td style="border-right:1px solid black; border-bottom:1px solid black; text-align:center">KU드림장학금</td>
+                    <td style="border-right:1px solid black; border-bottom:1px solid black; text-align:center">4월초, 10월초</td>
+                    <td style="border-right:1px solid black; border-bottom:1px solid black; text-align:center">학생복지팀 신청</td>
+                    <td style="border-bottom:1px solid black; text-align:center;">학생복지팀</td>
+                </tr>
+                <tr>
+                    <td style="border-right:1px solid black; border-bottom:1px solid black; text-align:center">근로장학금</td>
+                    <td style="border-right:1px solid black; border-bottom:1px solid black; text-align:center">근로부서 해당 사유 발생 시</td>
+                    <td style="border-right:1px solid black; border-bottom:1px solid black; text-align:center">-</td>
+                    <td style="border-bottom:1px solid black; text-align:center;">해당근로부서</td>
+                </tr>
+                <tr>
+                    <td style="border-right:1px solid black; border-bottom:1px solid black; text-align:center">소망장학금</td>
+                    <td style="border-right:1px solid black; border-bottom:1px solid black; text-align:center">4월, 10월</td>
+                    <td style="border-right:1px solid black; border-bottom:1px solid black; text-align:center">학생복지팀 신청</td>
+                    <td style="border-bottom:1px solid black; text-align:center;">학생복지팀</td>
+                </tr>
+            </table>
+            <p class="light" style="color:blue;"><b>입학전형 선발</b></p>
+            <table>
+                <tr style="background-color:rgb(201, 209, 218)">
+                    <td style="border-right:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center">장학금명칭</td>
+                    <td style="border-right:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center">신청시기</td>
+                    <td style="border-right:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center">신청방법</td>
+                    <td style="border-bottom:1px solid black; border-top:1px solid black; text-align:center;">선발부서</td>
+                </tr>
+                <tr>
+                    <td style="border-right:1px solid black; border-bottom:1px solid black; text-align:center">우수학생선수장학금</td>
+                    <td style="border-right:1px solid black; border-bottom:1px solid black; text-align:center">없음</td>
+                    <td style="border-right:1px solid black; border-bottom:1px solid black; text-align:center">없음</td>
+                    <td style="border-bottom:1px solid black; text-align:center;">체육위원회</td>
+                </tr>
+            </table>
+
+
+
+            <a href="https://sejong.korea.ac.kr/academics/administraion/scholarship/freshmen" style="display:inline-block"><p class="light">출처:고려대학교 세종캠퍼스 홈페이지 - 장학</p></a>
+            <!-- 장학금 선택 메뉴 -->
+
+            <ul id="money1" class="dropdown-content">
+                <h6>●선발기준</h6>
+                <p class="light">매학기 세종장학총괄위원회에서 장학금액을 소득분위에 따라 차등 결정</p>
+                <h6>●지급요건</h6>
+                <p class="light">면학장학금 신청자(국가장학금 신청 必)</p>
+                <h6>●선발부서</h6>
+                <p class="light">학과, 대학 및 학생복지팀</p>
+            </ul>
+
+            <ul id="money2" class="dropdown-content">
+                <h6>●선발기준</h6>
+                <p class="light">3인이상의 다자녀가구 또는 부모1인 이상이 외국국적인 다문화 가구 자녀, 매학기 신청에 의한 선발</p>
+                <h6>●지급요건</h6>
+                <p class="light">국가장학금 신청</p>
+            </ul>
+
+            <ul id="money3" class="dropdown-content">
+                <h6>●선발기준</h6>
+                <p class="light">형제자매가 동시 본교 재학중인자 중 학부생 1인 선발, 매학기 신청에 의한 선발</p>
+                <h6>●지급요건</h6>
+                <p class="light">국가장학금 신청</p>
+            </ul>
+
+            <ul id="money4" class="dropdown-content">
+                <h6>●선발기준</h6>
+                <p class="light">가계곤란장학생을 매학기 신청 (4월 초, 10월 초)에 의해 선발</p>
+                <h6>●지급요건</h6>
+                <p class="light">가계곤란장학금으로 자기소개서, 가계상황증빙서류 및 소득분위 등을 종합적으로 심사하고 학기초과자도 선발</p>
+            </ul>
+
+            <ul id="money5" class="dropdown-content">
+                <h6>●선발기준</h6>
+                <p class="light">재해를 입은 자</p>
+                <h6>●비고</h6>
+                <p class="light">피해사실확인서 제출자에 한함</p>
+            </ul>
+
+            <ul id="money6" class="dropdown-content">
+                <h6>●선발기준</h6>
+                <p class="light">봉사장학금(세종) 내규에 따라 지급</p>
+                <h6>●지급요건</h6>
+                <p class="light">이중수혜 허용</p>
+                <h6>●비고</h6>
+                <p class="light">선출직 감면, 이중수혜 허용</p>
+            </ul>
+
+            <ul id="money7" class="dropdown-content">
+                <h6>●선발기준</h6>
+                <p class="light">체육특기자 전형 입학생 중 체육위원회 선발</p>
+            </ul>
+
+            <ul id="money8" class="dropdown-content">
+                <h6>●선발기준</h6>
+                <p class="light">각 부서에서 선발</p>
+                <h6>●비고</h6>
+                <p class="light">이중수혜 허용</p>
+            </ul>
+
+            <ul id="money9" class="dropdown-content">
+                <h6>●선발기준</h6>
+                <p class="light">방문학생 프로그램 선발자</p>
+                <h6>●비고</h6>
+                <p class="light">이중수혜 허용</p>
+            </ul>
+
+            <ul id="dropdown1" class="dropdown-content">
+                <li><a href="#!">one</a></li>
+                <li><a href="#!">two</a></li>
+                <li class="divider"></li>
+                <li><a href="#!">three</a></li>
+            </ul>
+        </div>
+        <!--footer-->
+        <footer class="page-footer blue darken-4">
+            <div class="container">
+                <div class="row">
+                <div class="col l3 s12">
+                    <h5 class="white-text">바로가기</h5>
+                    <ul>
+                        <li id="myHover"><a class="white-text"  href="https://sejong.korea.ac.kr/kr">고려대 세종캠퍼스 홈페이지</a></li>
+                        <li id="myHover" style="padding-top:2px;"><a class="white-text"  href="https://sejong.korea.ac.kr/mbshome/mbs/cdc/index.do">대학 일자리 센터</a></li>
+                        <li id="myHover" style="padding-top:2px;"><a class="white-text"  href="https://portal.korea.ac.kr/front/Intro.kpd">고려대학교 포털</a></li>
+                        <li id="myHover" style="padding-top:2px;"><a class="white-text"  href="https://sportal.korea.ac.kr/">인재양성센터</a></li>
+                    </ul>
+                </div>
+
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                Made by 2017270920_박찬호 2017270973_김대희
+                </div>
+            </div>
+        </footer>
+        <script src="{% static 'js/materialize.js' %}"></script>
+    </body>
+</html>

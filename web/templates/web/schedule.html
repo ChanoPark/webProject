@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <title>웹 프로젝트!!</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="{% static 'css/main_style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+        
+        <script>
+            var a = new Date();
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.dropdown-trigger');
+                var instances = M.Dropdown.init(elems, 'alignment');
+            });
+        
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.sidenav');
+                var instances = M.Sidenav.init(elems, 'alignment');
+            });
+        </script>
+    </head>
+    <body>
+        <!--상단 배너-->
+        <nav class= "blue darken-4" role="navigation">
+            <div class="nav-wrapper container"><a id="logo-container" href="/main/" class="brand-logo">한마음고대</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="dropdown-trigger" href="#" data-target='dropdown2'><i class="Large material-icons">dehaze</i></a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--상단 네비게이션 내용-->
+        <ul id="dropdown2" class="dropdown-content">
+            <li><a href="/main/">메인화면</a></li>
+            <li class="divider"></li>
+            <li><a href="/scholarship/">장학금</a></li>
+            <li class="divider"></li>
+            <li><a href="/schedule/">학사일정</a></li>
+            <li class="divider"></li>
+            <li><a href="/activity/">대외활동</a></li>
+            <li class="divider"></li>
+            <li><a href="/job/">취업정보</a></li>
+            <li class="divider"></li>
+            <li><a href="/blog/">게시판</a></li>
+            <li class="divider"></li>
+        </ul>
+        <div class="container">
+            <!--학사일정표-->
+            <h3 style="text-align: center;"><script>document.write(a.getMonth()+1);</script>월의 학사일정표</h3>
+            <div style="border:1px solid #000">
+                <table>
+                    <tr>
+                        <td style="border-right:1px solid black; border-bottom:1px solid black; text-align: center; background-color: rgb(201, 209, 218);"><b>일정 제목</b></td>
+                        <td style="text-align: center; border-bottom:1px solid black; background-color: rgb(201, 209, 218);"><b>일정 내용</b></td>
+                    </tr>
+                    {% for i in scheduler %}
+                    <tr>
+                        <td style="border-right:1px solid black; text-align: center;">{{i.titleList}}</td>
+                        <td style="text-align: center;">{{i.descriptionList}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <a href="https://sejong.korea.ac.kr/academics/administration/calendar/undergraduate" style="display:inline-block"><p class="light">출처:고려대학교 세종캠퍼스 홈페이지 - 학사일정</p></a>
+        </div>
+        <script src="{% static 'js/materialize.js' %}"></script>
+
+        <!--footer-->
+        <footer class="page-footer blue darken-4">
+            <div class="container">
+                <div class="row">
+                <div class="col l3 s12">
+                    <h5 class="white-text">바로가기</h5>
+                    <ul>
+                        <li id="myHover"><a class="white-text"  href="https://sejong.korea.ac.kr/kr">고려대 세종캠퍼스 홈페이지</a></li>
+                        <li id="myHover" style="padding-top:2px;"><a class="white-text"  href="https://sejong.korea.ac.kr/mbshome/mbs/cdc/index.do">대학 일자리 센터</a></li>
+                        <li id="myHover" style="padding-top:2px;"><a class="white-text"  href="https://portal.korea.ac.kr/front/Intro.kpd">고려대학교 포털</a></li>
+                        <li id="myHover" style="padding-top:2px;"><a class="white-text"  href="https://sportal.korea.ac.kr/">인재양성센터</a></li>
+                    </ul>
+                </div>
+
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                Made by 2017270920_박찬호 2017270973_김대희
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
