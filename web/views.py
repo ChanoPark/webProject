@@ -24,7 +24,7 @@ def scholarship2(request):
 #############################
     
 def schedule(request):
-    req = requests.get('https://sejong.korea.ac.kr/academics/administration/calendar/undergraduate') #학사일정 크롤링
+    req = requests.get('https://sejong.korea.ac.kr/academics/administration/calendar/undergraduate', verify=False) #학사일정 크롤링
     raw = req.text
     html = BeautifulSoup(raw, 'html.parser')
     infos = html.select('div.listWrap')
@@ -45,7 +45,7 @@ def job(request):
     href_link = []
     num = 0
     List = []
-    req = requests.get('https://sejong.korea.ac.kr/user/boardList.do?handle=70991&siteId=cdc&id=cdc_030400000000') #채용정보 크롤링
+    req = requests.get('https://sejong.korea.ac.kr/user/boardList.do?handle=70991&siteId=cdc&id=cdc_030400000000', verify=False) #채용정보 크롤링
     raw = req.text
     html = BeautifulSoup(raw, 'html.parser')
 
@@ -74,7 +74,7 @@ def activity(request):
     href_link = []
     num = 0
     List = []
-    req = requests.get('https://sejong.korea.ac.kr/user/boardList.do?handle=71015&siteId=cdc&id=cdc_030600000000') #대외활동 크롤링
+    req = requests.get('https://sejong.korea.ac.kr/user/boardList.do?handle=71015&siteId=cdc&id=cdc_030600000000', verify=False) #대외활동 크롤링
     raw = req.text
     html = BeautifulSoup(raw, 'html.parser')
 
